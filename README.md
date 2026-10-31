@@ -5,7 +5,7 @@
 ---
 
 **Team Name:** CLOVER GUARDIAN  
-**Team Members:** Prakhar, Ayush, Raj, Aniket Dubey  
+**Team Members:** Prakhar, Ayush, Aniket Dubey  
 
 ---
 
