@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: kisan_connect_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: kisan_connect
+      MYSQL_USER: kisan
+      MYSQL_PASSWORD: kisanpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kisan_connect_backend
+    restart: always
+    environment:
+      - DATABASE_URL=mysql+pymysql://kisan:kisanpassword@mysql:3306/kisan_connect
+      - PORT=5000
+      - SECRET_KEY=clover-guardian-kisan-connect-secure-key-2026
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: kisan_connect_frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:

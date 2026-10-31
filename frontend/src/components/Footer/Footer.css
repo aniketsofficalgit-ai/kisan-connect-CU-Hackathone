@@ -1,0 +1,48 @@
+/* Footer Styling - Premium Clean High-Contrast */
+
+.kc-footer-premium {
+  background-color: #071F14; /* Deep Obsidian Emerald per Agrify */
+  color: #FAF9F3;
+  border-top: 4px solid #16A34A; /* Vibrant Agrify Green Accent line */
+  font-family: var(--font-body);
+}
+
+.kc-footer-heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.15rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.kc-footer-link-premium {
+  color: #E2EAE0;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  transition: all 0.2s ease;
+  display: block;
+  margin-bottom: 0.65rem;
+  text-decoration: none;
+}
+
+.kc-footer-link-premium:hover {
+  color: #E8BD59;
+  transform: translateX(3px);
+}
+
+.kc-footer-text {
+  color: #CBD8C8;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.kc-footer-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 0.95rem 1.15rem;
+}

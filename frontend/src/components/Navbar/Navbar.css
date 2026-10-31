@@ -1,0 +1,249 @@
+/* Modern Agritech Startup Navigation Bar - Clean, Zero-Overflow Responsive System */
+
+.kc-navbar-premium {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(13, 56, 35, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  max-width: 100vw;
+  box-shadow: 0 2px 14px rgba(13, 56, 35, 0.04);
+}
+
+/* Nav Links - Transparent Background, No Highlighter Box, Clean Active Dot/Underline */
+.kc-nav-link-premium {
+  color: #263A32;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  padding: 0.4rem 0.55rem;
+  border-radius: 9999px;
+  transition: color 0.15s ease, font-weight 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+  text-decoration: none;
+  background: transparent !important;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1400px) {
+  .kc-nav-link-premium {
+    font-size: 0.875rem;
+    padding: 0.45rem 0.75rem;
+    gap: 0.35rem;
+  }
+}
+
+.kc-nav-link-premium:hover {
+  color: #15803D !important;
+  background: transparent !important;
+}
+
+.kc-nav-link-premium.active {
+  color: #15803D !important;
+  font-weight: 700;
+  background: transparent !important;
+}
+
+.kc-nav-link-premium.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2.5px;
+  border-radius: 9999px;
+  background-color: #15803D;
+}
+
+/* Dedicated Dashboard Pill Shortcut */
+.kc-dashboard-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #E8F1E5;
+  color: #15803D !important;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  border: 1px solid #CDE2C8;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+@media (min-width: 1400px) {
+  .kc-dashboard-nav-pill {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.85rem;
+  }
+}
+
+.kc-dashboard-nav-pill:hover {
+  background-color: #DCEBD8;
+  color: #0D3823 !important;
+  border-color: #15803D;
+}
+
+.kc-dashboard-nav-pill.active {
+  background-color: #15803D;
+  color: #FFFFFF !important;
+  border-color: #15803D;
+  box-shadow: 0 1px 4px rgba(21, 128, 61, 0.25);
+}
+
+/* Segmented Language Switcher Group */
+.kc-lang-switch-group {
+  display: inline-flex;
+  align-items: center;
+  background-color: #F4F8F4;
+  border: 1px solid #D5E5D5;
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 2px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.kc-lang-toggle-btn {
+  background: transparent;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: #4B6354;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1280px) {
+  .kc-lang-switch-group {
+    min-width: 136px;
+  }
+  .kc-lang-toggle-btn {
+    min-width: 62px;
+    padding: 0.32rem 0.65rem;
+    font-size: 0.775rem;
+  }
+}
+
+.kc-lang-toggle-btn.active {
+  background: #15803D;
+  color: #FFFFFF;
+  box-shadow: 0 1px 4px rgba(21, 128, 61, 0.25);
+}
+
+.kc-lang-toggle-btn:not(.active):hover {
+  color: #0D3823;
+  background-color: rgba(21, 128, 61, 0.08);
+}
+
+/* Compact, perfectly aligned Join Button */
+.kc-navbar-join-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  height: 36px !important;
+  padding: 0 0.95rem !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  font-family: var(--font-heading) !important;
+  color: #FFFFFF !important;
+  background: linear-gradient(135deg, #16A34A 0%, #15803D 100%) !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+  transition: all 0.15s ease !important;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.22) !important;
+}
+
+@media (min-width: 1280px) {
+  .kc-navbar-join-btn {
+    height: 38px !important;
+    padding: 0 1.15rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+.kc-navbar-join-btn:hover {
+  background: linear-gradient(135deg, #15803D 0%, #166534 100%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.32) !important;
+}
+
+.kc-navbar-login-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  height: 36px !important;
+  padding: 0 0.9rem !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  font-family: var(--font-heading) !important;
+  color: #0D3823 !important;
+  background-color: transparent !important;
+  border-radius: 9999px !important;
+  border: 1.5px solid #D5E5D5 !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+  transition: all 0.15s ease !important;
+}
+
+@media (min-width: 1280px) {
+  .kc-navbar-login-btn {
+    height: 38px !important;
+    padding: 0 1.05rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+.kc-navbar-login-btn:hover {
+  background-color: #ECFDF5 !important;
+  border-color: #15803D !important;
+  color: #15803D !important;
+}
+
+/* Mobile drawer link item */
+.kc-drawer-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-radius: 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #20392A;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.kc-drawer-link:hover,
+.kc-drawer-link.active {
+  background-color: #ECFDF5;
+  color: #15803D;
+  font-weight: 700;
+}

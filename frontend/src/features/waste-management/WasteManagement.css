@@ -1,0 +1,93 @@
+/* Agricultural Waste Management & Marketplace Styling */
+
+.waste-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(32, 57, 42, 0.04);
+}
+
+.waste-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(52, 122, 70, 0.12);
+  border-color: var(--color-secondary);
+}
+
+.waste-card-image-box {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background-color: var(--color-pale-green);
+  overflow: hidden;
+}
+
+.waste-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.waste-card:hover .waste-card-image {
+  transform: scale(1.05);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1.15rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 0.85rem;
+  font-size: 0.925rem;
+  font-family: var(--font-body);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(52, 122, 70, 0.14);
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  line-height: 1;
+}
+
+.filter-pill.active {
+  background: linear-gradient(135deg, #16A34A 0%, #15803D 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);
+  border-color: #15803D;
+}
+
+.filter-pill.inactive {
+  background-color: #FFFFFF;
+  color: #4B6354;
+  border-color: #E2ECE0;
+}
+
+.filter-pill.inactive:hover {
+  background-color: #ECFDF5;
+  color: #15803D;
+  border-color: #A7F3D0;
+  transform: translateY(-1px);
+}
